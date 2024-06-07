@@ -1,7 +1,7 @@
 <template>
   <footer role="contentinfo" class="footer">
     <div class="container">
-      <span class="text-muted">Виконав студент групи КВ-32мп Русаков М. В.</span>
+      <span class="text-muted">Created by student group KV-32mp, Orydoroha M. V.</span>
     </div>
   </footer>
 </template>
@@ -12,6 +12,3 @@ export default {
 }
 </script>
 
-<style scoped>
-
-</style>

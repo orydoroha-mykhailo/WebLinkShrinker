@@ -3,17 +3,17 @@
     <table class="table">
       <thead class="thead-light">
       <tr>
-        <th scope="col">Ім’я</th>
-        <th scope="col">Пошта</th>
-        <th scope="col">Стать</th>
-        <th scope="col">Дата народження</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Birth Date</th>
       </tr>
       </thead>
       <tbody>
       <tr>
         <td>{{user_info.username}}</td>
         <td>{{user_info.email}}</td>
-        <td>{{user_info.gender === 'M' ? 'Чоловіча' : 'Жіноча'}}</td>
+        <td>{{user_info.gender === 'M' ? 'Male' : 'Female'}}</td>
         <td>{{new Date(user_info.birth_date).toLocaleDateString()}}</td>
       </tr>
       </tbody>
@@ -21,9 +21,9 @@
     <table class="table">
       <thead class="thead-light">
       <tr>
-        <th scope="col">Дата</th>
-        <th scope="col">Повне посилання</th>
-        <th scope="col">Скорочене</th>
+        <th scope="col">Date</th>
+        <th scope="col">Full URL</th>
+        <th scope="col">Shrinked</th>
         <th scope="col"></th>
         <th scope="col"></th>
       </tr>
@@ -35,7 +35,7 @@
         <td>{{url.url_short}}</td>
         <td>
           <button id="submit_button"  @click="updateUrl(url.id)" style="border: none; background-color: transparent;">
-            <svg width="16px" height="16px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-trash-fill">
+            <svg width="16px" height="16px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-pencil-fill">
               <path d="M13.877 3.123l3.001 3.002.5-.5a2.123 2.123 0 10-3.002-3.002l-.5.5zM15.5 7.5l-3.002-3.002-9.524 9.525L2 17.999l3.976-.974L15.5 7.5z" fill="#5C5F62"/></svg>
           </button>
         </td>
@@ -53,19 +53,19 @@
 </template>
 
 <script>
-import {getAPI} from '../api'
+import { getAPI } from '../api'
 
 export default {
-  data () {
+  data() {
     return {
       user_info: "",
-      urls:[]
-
+      urls: []
     }
   },
-  
-  mounted (){
+
+  mounted() {
     this.getUserInfo();
+
     if (this.$store.getters.authorized) {
       this.getUrls();
     } else {
@@ -74,21 +74,22 @@ export default {
   },
 
   methods: {
-    getUserInfo () {
-        getAPI('/api/user/',
-        { headers: { Authorization: `Bearer ${this.$store.state.accessToken}` } })
-      .then(response => this.user_info = response.data)
+    getUserInfo() {
+      getAPI('/api/user/', { headers: { Authorization: `Bearer ${this.$store.state.accessToken}` } })
+          .then(response => this.user_info = response?.data ?? {})
     },
 
     getUrls() {
-      getAPI('/api/urls/'+this.$store.state.user_id+'/', { headers: { Authorization: `Bearer ${this.$store.state.accessToken}` } }).then(response => this.urls = response.data)
+      getAPI('/api/urls/' + this.$store.state.user_id + '/', { headers: { Authorization: `Bearer ${this.$store.state.accessToken}` } })
+          .then(response => this.urls = response?.data)
     },
 
-    deleteUrl(id){
-      getAPI.delete('/urls/'+id+'/', { headers: { Authorization: `Bearer ${this.$store.state.accessToken}` } }).then(response => {
-        console.log(response)
-        this.getUrls()
-      }).catch(error => {
+    deleteUrl(id) {
+      getAPI.delete('/urls/' + id + '/', { headers: { Authorization: `Bearer ${this.$store.state.accessToken}` } })
+          .then(response => {
+            console.log(response)
+            this.getUrls()
+          }).catch(error => {
         console.log(error)
       })
     },
@@ -97,7 +98,6 @@ export default {
     },
   }
 }
-
 </script>
 
 <style scoped>
@@ -106,3 +106,4 @@ export default {
   text-align: left;
 }
 </style>
+

@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -52,7 +53,7 @@ ROOT_URLCONF = 'django_backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'frontend', 'src', 'views')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -148,6 +149,6 @@ CELERY_CREATE_MISSING_QUEUES = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'misha.turkin.2000@gmail.com'
-EMAIL_HOST_PASSWORD = 'ndyxiqnhizmquhrc'
+EMAIL_HOST_USER = 'orydoroha.mykhailo@gmail.com'
+EMAIL_HOST_PASSWORD = '12345Qwerty'
 EMAIL_PORT = 587
