@@ -82,4 +82,3 @@ export default {
   color: #ffffff; /* White text color on hover */
 }
 </style>
-

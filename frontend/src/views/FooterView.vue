@@ -11,4 +11,3 @@ export default {
   name: "FooterView.vue"
 }
 </script>
-

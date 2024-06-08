@@ -63,4 +63,3 @@ export default {
   background-color: #001f3f; /* Dark blue background */
 }
 </style>
-

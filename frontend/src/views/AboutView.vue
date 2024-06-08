@@ -18,4 +18,3 @@
     </div>
   </main>
 </template>
-

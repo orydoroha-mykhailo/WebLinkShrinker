@@ -20,6 +20,8 @@ class Migration(migrations.Migration):
                 ('username', models.CharField(db_index=True, max_length=255, unique=True)),
                 ('birth_date', models.DateField(null=True)),
                 ('gender', models.CharField(choices=[('M', 'Male'), ('F', 'Female')], max_length=1, null=True)),
+                ('is_active', models.BooleanField(default=True)),
+                ('is_staff', models.BooleanField(default=False)),
             ],
             options={
                 'abstract': False,

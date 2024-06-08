@@ -97,4 +97,3 @@ export default {
   color: #0056b3; /* Darker blue text color on hover */
 }
 </style>
-
