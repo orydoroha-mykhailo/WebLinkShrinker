@@ -15,13 +15,13 @@ This project is developed as part of the coursework for "Programming User Interf
 
 ### Programming User Interfaces 2024
 
-1. [Lab Work 1](https://docs.google.com/document/d/1pZukbrWrHOIZTcQEFVo7w0Lq2CpdKnvexJEQffG6vTU/edit?usp=sharingt)
+1. [Lab Work 1](https://docs.google.com/document/d/1pZukbrWrHOIZTcQEFVo7w0Lq2CpdKnvexJEQffG6vTU/edit?usp=sharing)
 2. [Lab Work 2](https://docs.google.com/document/d/1vDP3XTaS1AaKG_-8A5sl-z513MwPMbJZ82ArT5flJfA/edit?usp=sharing)
 3. [Lab Work 3](https://example.com/lab3_ui)
 
 ### Web Application Development Technology
 
-1. [Lab Work 1](https://example.com/lab1_webdev)
+1. [Lab Work 1](https://docs.google.com/document/d/1eBmpXmZe8qkjatcnfJfWKnnoumhF4L6_BsW8mSHQ_kE/edit?usp=sharing)
 2. [Lab Work 2](https://example.com/lab2_webdev)
 3. [Lab Work 3](https://example.com/lab3_webdev)
 
