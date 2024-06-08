@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -31,6 +30,9 @@ INSTALLED_APPS = [
     'corsheaders',
     'users',
     'urls',
+    'chat',
+    'channels',
+    'tasks',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +55,7 @@ ROOT_URLCONF = 'django_backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'frontend', 'src', 'views')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -65,6 +67,8 @@ TEMPLATES = [
         },
     },
 ]
+WSGI_APPLICATION = 'django_backend.wsgi.application'
+ASGI_APPLICATION = 'django_backend.asgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
@@ -76,20 +80,20 @@ DATABASES = {
     }
 }
 
-CHANNEL_LAYERS = {
-    "default": {
-        "BACKEND": "channels.layers.InMemoryChannelLayer"
-    }
-}
-
 #CHANNEL_LAYERS = {
 #    "default": {
-#        "BACKEND": "channels_redis.core.RedisChannelLayer",
-#        "CONFIG": {
-#            'hosts': [('127.0.0.1', 6379)]
-#        }
+#        "BACKEND": "channels.layers.InMemoryChannelLayer"
 #    }
 #}
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            'hosts': [('127.0.0.1', 6379)]
+    }
+}
+}
 
 
 # Password validation
@@ -149,6 +153,6 @@ CELERY_CREATE_MISSING_QUEUES = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'orydoroha.mykhailo@gmail.com'
-EMAIL_HOST_PASSWORD = '12345Qwerty'
+EMAIL_HOST_USER = 'maxim.ru02@gmail.com'
+EMAIL_HOST_PASSWORD = 'okkwjevhranlcusq'
 EMAIL_PORT = 587
