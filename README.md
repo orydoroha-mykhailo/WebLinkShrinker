@@ -23,7 +23,7 @@ This project is developed as part of the coursework for "Programming User Interf
 
 1. [Lab Work 1](https://docs.google.com/document/d/1eBmpXmZe8qkjatcnfJfWKnnoumhF4L6_BsW8mSHQ_kE/edit?usp=sharing)
 2. [Lab Work 2](https://docs.google.com/document/d/1eWWa-pN45NHQ3wyEM7PdBn_ysjDAWXY4FZTiLwZJgIg/edit?usp=sharing)
-3. [Lab Work 3](https://example.com/lab3_webdev)
+3. [Lab Work 3](https://docs.google.com/document/d/1rBNbPoUVmvD0z9LjkS4sEfrKtzPXltuZ2EHGfMWV7Ls/edit?usp=sharing)
 
 ## Getting Started
 
